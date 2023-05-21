@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Reference Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+	<!-- Reference Bootstrap and local files -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" th:href="@{css/slick.css}">
+	<link rel="stylesheet" th:href="@{css/slick-theme.css}">
+	<link rel="stylesheet" th:href="@{css/home.css}">
+	<link rel="icon" th:href="@{images/header/white-logo.png}">
+
+	<title>Wedding-Venue Reservation</title>
+</head>
+
+<body>
+
+	<div class="main-overlay js-main-overlay"></div>
+
+	<!-- Main Cover Section -->
+	<section class="cover-main" id="home">
+		<header>
+			<nav class="nav-wrapper">
+				<div class="logo">
+					<a href="#"> <img src="images/header/white-logo.gif" class="logo">
+					</a>
+				</div>
+
+				<!-- Menu bar -->
+				<ul class="menu">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#work">Tents</a></li>
+					<li><a href="#about">Services</a></li>
+					<li><a href="#slider">Review</a></li>
+					<li><a href="#footer">About Me</a></li>
+				</ul>
+			</nav>
+			<div class="menu-trigger js-menu-trigger"></div>
+		</header>
+
+		<!-- Main buttons and title -->
+		<div class="wrapper">
+			<ul id="scene" data-invert-x="false" data-invert-y="false" data-scalar-x="7" data-scalar-y="7"
+				data-friction-x="0.1" data-friction-y="0.1" data-origin-x="0.5" data-origin-y="0.5">
+				<li class="layer name" data-depth="0.90">WEDDING-VENUE RESERVATION</li>
+				<li class="layer title" data-depth="0.50">Book Now !</li>
+				<li class="layer btn btn-main" data-depth="0.30"><a th:href="@{/new-reservation}"
+						class="reservation-btn">New
+						Reservation</a> <a th:href="@{/your-reservations}" class="reservations-btn">Your
+						Reservations</a> <br> <a th:href="@{/logout}" class="logout-btn">Sign
+						Out</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!--Room Cards Section -->
+	<section class="section-padding" id="work">
+		<h2 class="sub-title">Wedding-Venue Tent and Rooms</h2>
+		<div class="container-rooms">
+			<div class="row-room">
+
+				<!-- Single room card -->
+				<div class="col-md-4 col-sm-6">
+					<div class="col-xs-12 fix_p_r">
+						<div class="slide-item card" style="padding: 10px;">
+							<h3>UMUCYO Tent:</h3>
+							<img src="images/rooms/single.jpeg">
+
+							<p>
+								UMUCYO Tent <br> with free Parking for 15 person or 30 Small Cars
+								start from $500 for a Day up to $1999.
+							</p>
+
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Double room card -->
+				<div class="col-md-4 col-sm-6">
+					<div class="col-xs-12 fix_p_r">
+						<div class="slide-item card" style="padding: 10px;">
+							<h3>UBURANGA Tent:</h3>
+							<img src="images/rooms/family.jpg">
+
+							<p>
+								UBURANGA Tent <br> with free Parking for 25 person or 50 Small Cars
+								start from $1000 for a Day up to $2999.
+							</p>
+
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Family room card -->
+				<div class="col-md-4 col-sm-6">
+					<div class="col-xs-12 fix_p_r">
+						<div class="slide-item card" style="padding: 10px;">
+							<h3>UBWIZA Tent:</h3>
+							<img src="images/rooms/double.jpg">
+
+							<p>
+								UBWIZA Tent <br> with free Parking for 35 person or 70 Small Cars
+								start from $1300 for a Day up to $3299.
+							</p>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Honeymoon room card -->
+				<div class="col-md-4 col-sm-6">
+					<div class="col-xs-12 fix_p_r">
+						<div class="slide-item card" style="padding: 10px;">
+							<h3>UBUKI Tent:</h3>
+							<img src="images/rooms/suite.jpeg">
+
+							<p>
+								UBUKI Tent <br> with free Parking for 45 person or 90 Small Cars
+								start from $1000 for a Day up to $4999.
+							</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Section -->
+	<section class="services-sec" id="about">
+		<div class="wrapper">
+			<h2 class="sub-title">OUR FACILITIES AND SERVICES</h2>
+
+			<!-- room services and breakfast (up row) -->
+			<section class="tm-service-section">
+				<div class="tm-service">
+					<img class="tm-ser-image" src="images/service/bell.png">
+					<div>
+						<p class="b"> Bridal suite Service</p>
+						<p>Enjoy your time with excellent and impeccable service</p>
+					</div>
+				</div>
+
+				<div class="tm-service">
+					<img class="tm-ser-image" src="images/service/coffee.png">
+					<div>
+						<p class="b">Free Breakfast</p>
+						<p>Enjoy our free breakfast in the morning</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- parking services and spa (down row) -->
+			<section class="tm-service-section">
+
+				<div class="tm-service">
+					<img class="tm-ser-image" src="images/service/car-front.jpg">
+					<div>
+						<p class="b">Free Parking</p>
+						<p>No need to pay any extra charges to park your vehicle</p>
+					</div>
+				</div>
+
+				<div class="tm-service">
+					<img class="tm-ser-image" src="images/service/spa.png">
+					<div>
+						<p class="b">Free Spa</p>
+						<p>Bride and Groom will relax at the in house Spa in their stay</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+
+	<!-- Slider Section -->
+	<div class="slider-div" id="slider">
+		<h2 class="sub-title">Wedding-Venue Review</h2>
+		<div class="slider">
+			<!-- slide collection images -->
+			<div class="slide">
+				<img src="images/slide/one.jpg" alt="" class="img-responsive" />
+			</div>
+			<div class="slide">
+				<img src="images/slide/two.jpg" alt="" class="img-responsive" />
+			</div>
+			<div class="slide">
+				<img src="images/slide/three.jpg" alt="" class="img-responsive" />
+			</div>
+			<div class="slide">
+				<img src="images/slide/four.jpg" alt="" class="img-responsive" />
+			</div>
+			<div class="slide">
+				<img src="images/slide/five.jpg" alt="" class="img-responsive" />
+			</div>
+			<div class="slide">
+				<img src="images/slide/six.jpg" alt="" class="img-responsive" />
+			</div>
+			<div class="slide">
+				<img src="images/slide/seven.jpg" alt="" class="img-responsive" />
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="main-footer">
+
+		<div class="container-body">
+
+			<!-- Footer Column one (information) -->
+			<div class="colum1">
+				<h1>About Me</h1>
+				<p>SERJO NATHAN</p>
+				<img class="me-image" alt="" src="/images/footer/me.jpg" />
+
+			</div>
+
+			<!-- Footer Column two (social links) -->
+			<div class="colum2">
+				<h1>Social Links</h1>
+
+				<div class="row">
+					<a href="https://github.com/S3rjo" target="_blank"><img src="/images/footer/github.png" /></a>
+					<p>GitHub Account</p>
+				</div>
+
+				<div class="row">
+					<a href="https://www.linkedin.com/in/s3rjo/" target="_blank"><img
+							src="/images/footer/linkedIn.png" /></a>
+					<p>LinkedIn Account</p>
+				</div>
+
+				<div class="row">
+					<a href="https://www.facebook.com/profile.php?id=100023361645696" target="_blank"><img
+							src="/images/footer/facebook.png" /></a>
+					<p>Facebook Account</p>
+				</div>
+			</div>
+
+			<!-- Footer Column three (contact info) -->
+			<div class="colum3">
+				<h1>Contact</h1>
+
+				<div class="row2">
+					<a target="_blank"
+						href="https://www.google.com/maps/place/Kigali/@-1.9294195,29.962429,11z/data=!3m1!4b1!4m6!3m5!1s0x19dca4258ed8e797:0xf32b36a5411d0bc8!8m2!3d-1.9440727!4d30.0618851!16zL20vMGZuaGY"><img
+							src="images/footer/location.png" /></a>
+					<p>Kigali, Rwanda</p>
+				</div>
+
+				<div class="row2">
+					<a href="mailto:outlook_5fbf7146f451bcaf@outlook.com" target="_blank"><img src="/images/footer/outlook.png" /></a>
+					<p>Outlook Account</p>
+				</div>
+
+
+				<div class="row2">
+					<a href="https://wa.me/250788918739" target="_blank"><img src="/images/footer/whatsApp.png"
+							class="whats-img" /></a>
+					<p>WhatsApp Account</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Container Footer -->
+		<div class="container-footer">
+			<div class="footer">
+				<div class="copyright">
+					Copyright ©2023 All rights reserved | <a>Developed By: Serjo-Nathan</a>
+				</div>
+
+				<div class="information">
+					<a>Wedding-Venue Reservation System</a> | <a>WebTech Project</a> | <a>Pr.Jerome</a>
+				</div>
+			</div>
+
+		</div>
+
+	</footer>
+
+	<!-- Reference Javascript and local files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script th:src="@{scripts/parallax.min.js}"></script>
+	<script th:src="@{scripts/slick.min.js}"></script>
+	<script th:src="@{scripts/home.js}"></script>
+
+</body>
+
+</html>
